@@ -1,36 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<time.h>
+#include "Fonctions.h"
 
-typedef struct {
-int Seat_Number;
-int* Seat_Tab;
-char Category;
-} Row;
-
-typedef struct {
-
-char Name[120];                 // Name of the room
-
-float Price_By_Category[2];       // Table of prices
-int Row_Number;                 // Number of rows in this room
-Row* Rows_Tab;                  // Table containing
-int Pit;                        // 1 if the Room has a pit, 0 otherwise
-int Is_Reserved;                // 1 if the Room is reserved, 0 otherwise
-} Room;
-
-typedef struct {
-int Hour;
-int Minutes;
-} Time;
-
-typedef struct  {
-char Show_Name[120];
-Room Used_Room;
-Time Starting_Time;
-Time Ending_Time;
-} Show;
 
 // A refaire par rapport aux printfs (il faudrait garder les scanf seulement dans cette fonction)
 Time createtime(){
@@ -165,9 +134,3 @@ Show create_Show(){
     return Created_Show;
     }
 
-
-
-int main(){
-    create_Show();
-    return 0;
-}

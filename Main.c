@@ -2,7 +2,7 @@
 
 int couleurS(char pr, char para){
     couleur("0");
-    couleur("%s", para);
+    couleur(para);
     printf("%s",pr);
     couleur("0");
     return 0;
