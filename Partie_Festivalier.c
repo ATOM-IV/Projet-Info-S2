@@ -15,12 +15,13 @@ void printTime(Time T){
 
 void Display_Shows(Show* List_Of_Shows, int Size_Of_List) {
     for (int i = 0;(i<Size_Of_List); i++) {
-        printf("i = %d\n", i);
         printf("Show %d : %s\n", i+1, List_Of_Shows[i].Show_Name);
-        printf("Lieu : %s\n", List_Of_Shows[i].Used_Room);
+        printf("Lieu : %s\n", List_Of_Shows[i].Used_Room.Name);
         printf("Heure de début :" ); 
         printTime(List_Of_Shows[i].Starting_Time);
-        printf("\nHeure de fin : %dh:%d \n\n", List_Of_Shows[i].Ending_Time.Hour, List_Of_Shows[i].Ending_Time.Minutes);
+        printf("\nHeure de fin :");
+        printTime(List_Of_Shows[i].Ending_Time);
+        printf("\n");
     }
 }
 
@@ -41,13 +42,13 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
     // Ask the user to choose the show
     printf("\nChoisissez le concert auquel vous voulez participez (ou entrez 0 pour revenir au menu principal): \n");
     Valid_Input = 0;
-    while(!Valid_Input) {           // Valid_Input != 1
+    while(Valid_Input == 0) {           // Valid_Input != 1
         Valid_Input = (scanf(" %d", &Chosen_Show_Number)            // Check if the entry was an int 
         &&(Chosen_Show_Number>-1)                                   
         &&(Chosen_Show_Number<=Size_Of_List_Of_Planned_Shows)       // Check if the int is between 0 and the amount of proposed Shows
         &&(getchar() == '\n'));                                     // Check if there was nothing after the int (the entry was correct)
-        if (!Valid_Input) {
-            printf("Entrée invalide. Entrez le numéro du show auquel vous voulez participez comme présenté plus haut (ou 0 pour revenir au menu principal): \n");
+        if (Valid_Input == 0) {
+            printf("Entrée invalide. Entrez le numéro du concert auquel vous voulez participez comme présenté plus haut (ou 0 pour revenir au menu principal): \n");
             while(getchar() != '\n');                               // Empty the scanned string                        
         }
     }
