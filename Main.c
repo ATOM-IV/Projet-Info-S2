@@ -8,7 +8,7 @@ int couleurS(char pr, char para){
     return 0;
 }
 
-char* VerfiCat(Row* Ro){
+char* VerfiCat(Row Ro){
     switch(Ro.Category){
         case 'A' :  return "36" ;break;
         case 'B' :  return "34" ;break;
@@ -19,11 +19,14 @@ char* VerfiCat(Row* Ro){
 
 
 void printShow(Room R){
+    int acc = 0;
+    int disp = 0;
+    int accCatA = 0;
     printf("\nPlan des places disponibles pour la %s :\n", R.Name);
     printf("________________________________\n");
-    for (int i=0; i<R.Row_Number; i++){
-        printf("%c %d", R.Rows_Tab[i].Category, i+1);
-        if (R.Pit == 0){
+    if (R.Pit == 0){
+        for (int i=0; i<R.Row_Number; i++){
+            printf("%c %d - ", R.Rows_Tab[i].Category, i+1);
             for (int j=0; j<R.Rows_Tab[i].Seat_Number;j++){
                 switch(R.Rows_Tab[i].Seat_Tab[j]){
                     case 0 :    couleurS("0",VerfiCat(R.Rows_Tab[i])); printf(" ");break;
@@ -31,9 +34,29 @@ void printShow(Room R){
                     case 2 :    printf(" ");break;
                     default :   printf(" ");break;
                 }
+            }
+            printf("\n");
+        }
+    }
+    if (R.Pit == 1){
+        for (int i=0; i<R.Row_Number; i++){
+            if (VerfiCat(Rows_Tab[i]) == "36") {
+                for (int j=0; j<R.Rows_Tab[i].Seat_Number;j++){
+                switch(R.Rows_Tab[i].Seat_Tab[j]){
+                    case 0 :    ;break;
+                    case 1 :    acc = acc + 1;break;
+                    case 2 :    acc = acc + 2;
+                                disp = disp + 2;break;
+                    default :   break;
+                    }
+                }
+            accCatA = accCatA + 1;
             }
         }
-        if (R.Pit == 1){
+        printf("A - Le nombre de place prises sur le nombre places disponibles est : %d/%d", acc, disp);
+        printf("\n");
+        for (int i = accCatA + 1; i<R.Row_Number; i++){
+            printf("%c %d", R.Rows_Tab[i].Category, i+1);
             for (int j=0; j<R.Rows_Tab[i].Seat_Number;j++){
                 switch(R.Rows_Tab[i].Seat_Tab[j]){
                     case 0 :    couleurS("0",VerfiCat(R.Rows_Tab[i])); printf(" ");break;
@@ -42,22 +65,10 @@ void printShow(Room R){
                     default :   printf(" ");break;
                 }
             }
+            printf("\n");
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
