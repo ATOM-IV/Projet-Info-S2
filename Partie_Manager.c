@@ -18,7 +18,7 @@ void createrow(Row* Created_Row_Adress, char Row_Category, int Row_Position, int
     
     Row Created_Row;
     int Valid_Input = 0;
-    printf("\n Entrez le nombre de sièges de la rangée %d de la catégorie %c, ou 0 pour revenir au menu manager : ", Row_Position, Row_Category);
+    printf("\nEntrez le nombre de sièges de la rangée %d de la catégorie %c, ou 0 pour revenir au menu manager : ", Row_Position, Row_Category);
     while (Valid_Input == 0) {
         Valid_Input = (scanf(" %d", &(Created_Row.Seat_Number))
             && (Created_Row.Seat_Number >= 0)
