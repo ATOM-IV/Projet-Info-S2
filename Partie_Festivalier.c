@@ -61,7 +61,7 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
 
 
 
-    printRoom(List_Of_Planned_Shows[Chosen_Show_Number].Used_Room);                            // Display the room to the user so he can pick his seat(s)    
+    printShow(List_Of_Planned_Shows[Chosen_Show_Number].Used_Room);                            // Display the room to the user so he can pick his seat(s)    
 
     // Ask the user to choose the category of his seat
     Valid_Input = 0;

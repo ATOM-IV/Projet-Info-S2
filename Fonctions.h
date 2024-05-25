@@ -53,8 +53,7 @@ Time createtime();
 void createrow(Row* Created_Row_Adress, char Row_Category, int Row_Position, int* Exited);
 void createroom(Room* Created_Room_Adress, int* Exited);
 Show create_Show();
-void deleteRoom(Room Room_To_Delete);
-void deleteShow(Show Show_To_Delete);
+
 
 
 //Client
@@ -64,6 +63,8 @@ void Display_Shows(Show* List_Of_Shows, int Size_Of_List);
 void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned_Shows);
 void Reserve_Seats(Room* Room_To_Modify, int Chosen_Row, int Chosen_Seat);
 
-
+//Main
+char* VerifCat(Row Ro);
+void printShow(Room R);
 
 #endif

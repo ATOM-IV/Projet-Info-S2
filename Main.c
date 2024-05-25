@@ -8,7 +8,7 @@ int couleurS(char pr, char para){
     return 0;
 }
 
-char* VerfiCat(Row Ro){
+char* VerifCat(Row Ro){
     switch(Ro.Category){
         case 'A' :  return "36" ;break;
         case 'B' :  return "34" ;break;
@@ -29,7 +29,7 @@ void printShow(Room R){
             printf("%c %d - ", R.Rows_Tab[i].Category, i+1);
             for (int j=0; j<R.Rows_Tab[i].Seat_Number;j++){
                 switch(R.Rows_Tab[i].Seat_Tab[j]){
-                    case 0 :    couleurS("0",VerfiCat(R.Rows_Tab[i])); printf(" ");break;
+                    case 0 :    couleurS("0",VerifCat(R.Rows_Tab[i])); printf(" ");break;
                     case 1 :    couleurS("X","31"); printf(" ");break;
                     case 2 :    printf(" ");break;
                     default :   printf(" ");break;
@@ -40,7 +40,7 @@ void printShow(Room R){
     }
     if (R.Pit == 1){
         for (int i=0; i<R.Row_Number; i++){
-            if (VerfiCat(Rows_Tab[i]) == "36") {
+            if (VerifCat(R.Rows_Tab[i]) == "36") {
                 for (int j=0; j<R.Rows_Tab[i].Seat_Number;j++){
                 switch(R.Rows_Tab[i].Seat_Tab[j]){
                     case 0 :    ;break;
@@ -59,7 +59,7 @@ void printShow(Room R){
             printf("%c %d", R.Rows_Tab[i].Category, i+1);
             for (int j=0; j<R.Rows_Tab[i].Seat_Number;j++){
                 switch(R.Rows_Tab[i].Seat_Tab[j]){
-                    case 0 :    couleurS("0",VerfiCat(R.Rows_Tab[i])); printf(" ");break;
+                    case 0 :    couleurS("0",VerifCat(R.Rows_Tab[i])); printf(" ");break;
                     case 1 :    couleurS("X","31"); printf(" ");break;
                     case 2 :    printf(" ");break;
                     default :   printf(" ");break;
