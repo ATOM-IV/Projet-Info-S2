@@ -34,6 +34,7 @@ typedef struct  {
     Room Used_Room;
     Time Starting_Time;
     Time Ending_Time;
+    int Number_Of_Reserved_Seats;
 } Show;
 
 
