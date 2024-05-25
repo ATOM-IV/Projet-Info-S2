@@ -19,7 +19,7 @@ typedef struct {
     char Name[120];                 // Name of the room
     float Price_By_Category[2];     // Table of prices
     int Row_Number;                 // Number of rows in this room
-    Row* Rows_Tab;                  // Table containing
+    Row* Rows_Tab;                  // Table containing the rows
     int Pit;                        // 1 if the Room has a pit, 0 otherwise
     int Is_Reserved;                // 1 if the Room is reserved, 0 otherwise
 } Room;

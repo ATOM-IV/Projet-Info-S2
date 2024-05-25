@@ -28,7 +28,7 @@ void Display_Shows(Show* List_Of_Shows, int Size_Of_List) {
 void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned_Shows) {
     // Procedure that allows the user to reserve seats in a room
     
-    int Chosen_Show_Number;                  // Position of the Show in the table List_Of_Planned_Shows
+    int Chosen_Show_Number;                     // Position of the Show in the table List_Of_Planned_Shows
     int Reservation_Size;              
     char Chosen_Category;                       // Category of the reserved seat(s)
     char Manually_Choose_Seats;                 // "O" for True (then the program finds available seats), "N" for False
@@ -42,7 +42,7 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
     // Ask the user to choose the show
     printf("\nChoisissez le concert auquel vous voulez participez (ou entrez 0 pour revenir au menu principal): \n");
     Valid_Input = 0;
-    while(Valid_Input == 0) {           // Valid_Input != 1
+    while(Valid_Input == 0) {                                       // Valid_Input != 1
         Valid_Input = (scanf(" %d", &Chosen_Show_Number)            // Check if the entry was an int 
         &&(Chosen_Show_Number>-1)                                   
         &&(Chosen_Show_Number<=Size_Of_List_Of_Planned_Shows)       // Check if the int is between 0 and the amount of proposed Shows
@@ -53,10 +53,10 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
         }
     }
 
-    if (Chosen_Show_Number == 0) {             // If the user wants to go back to the main menu
-        return;                                // Get out of the procedure User_Reserve_Seats
+    if (Chosen_Show_Number == 0) {                                  // If the user wants to go back to the main menu
+        return;                                                     // Get out of the procedure User_Reserve_Seats
     }
-    Chosen_Show_Number--;                      // Reduce by 1 the variable because it will be used as an index for tables
+    Chosen_Show_Number--;                                           // Reduce by 1 the variable because it will be used as an index for tables
 
 
 
@@ -78,8 +78,8 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
             while(getchar() != '\n');                               // Empty the scanned string
         }
     }
-    if (Chosen_Category == '0') {             // If the user wants to go back to the main menu
-        return;                               // Get out of the procedure User_Reserve_Seats
+    if (Chosen_Category == '0') {                                   // If the user wants to go back to the main menu
+        return;                                                     // Get out of the procedure User_Reserve_Seats
     } 
 
 
@@ -88,19 +88,19 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
 
     printf("Le programme peut vous attribuer des places automatiquement. \nVoulez vous choisir vous-même vos places ? (Oui : 'O', Non : 'N', '0' pour revenir au menu principal): ");
     Valid_Input = 0;
-    while(!Valid_Input) {                                           // Valid_Input != 1
-        Valid_Input = (scanf(" %c", &Manually_Choose_Seats)            // Check if the entry was an int 
-                && ((Manually_Choose_Seats == 'O')                // Check if the entry is valid
+    while(!Valid_Input) {                                                                // Valid_Input != 1
+        Valid_Input = (scanf(" %c", &Manually_Choose_Seats)                             // Check if the entry was an int 
+                && ((Manually_Choose_Seats == 'O')                                      // Check if the entry is valid
                 || (Manually_Choose_Seats == 'N') 
-                || (Manually_Choose_Seats == '0'))       // Check if the int is between 0 and the amount of proposed Shows
-        &&(getchar() == '\n'));                                     // Check if there was nothing after the int (the entry was correct)
+                || (Manually_Choose_Seats == '0'))                                      // Check if the int is between 0 and the amount of proposed Shows
+        &&(getchar() == '\n'));                                                         // Check if there was nothing after the int (the entry was correct)
         if (!Valid_Input) {
             printf("Entrée invalide. Entrez 'O', 'N' ou '0' pour revenir au menu principal: \n");
-            while(getchar() != '\n');                               // Empty the scanned string                        
+            while(getchar() != '\n');                                                   // Empty the scanned string                        
         }
     }
-    if (Manually_Choose_Seats == '0') {             // If the user wants to go back to the main menu
-        return;                                     // Get out of the procedure User_Reserve_Seats
+    if (Manually_Choose_Seats == '0') {                                                 // If the user wants to go back to the main menu
+        return;                                                                         // Get out of the procedure User_Reserve_Seats
     }
 
 
@@ -129,10 +129,10 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
     // Ask the user how many seats does he want to reserve
     printf("Combien de places voulez réserver (0 pour revenir au menu principal) : ");
     Valid_Input = 0;
-    while(!Valid_Input) {                                         // Valid_Input != 1
-        Valid_Input = (scanf(" %d", &Reservation_Size)            // Check if the entry was an int 
+    while(!Valid_Input) {                                           // Valid_Input != 1
+        Valid_Input = (scanf(" %d", &Reservation_Size)              // Check if the entry was an int 
         &&(Reservation_Size>-1)                                   
-        &&(Reservation_Size<=Size_Of_Largest_Row)       // Check if the int is between 0 and the amount of proposed Shows
+        &&(Reservation_Size<=Size_Of_Largest_Row)                   // Check if the int is between 0 and the amount of proposed Shows
         &&(getchar() == '\n'));                                     // Check if there was nothing after the int (the entry was correct)
         if (!Valid_Input) {
             printf("Entrée invalide. Entrez le numéro du show auquel vous voulez participez comme présenté plus haut (ou 0 pour revenir au menu principal): \n");
