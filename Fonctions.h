@@ -16,7 +16,7 @@ typedef struct {
 } Row;
 
 typedef struct {
-    char Name[120];                 // Name of the room
+    char* Name;                 // Name of the room
     float Price_By_Category[2];     // Table of prices
     int Row_Number;                 // Number of rows in this room
     Row* Rows_Tab;                  // Table containing the rows
