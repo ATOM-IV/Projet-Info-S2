@@ -17,7 +17,7 @@ typedef struct {
 
 typedef struct {
     char* Name;                     // Name of the room
-    float Price_By_Category[2];     // Table of prices
+    float* Price_By_Category;       // Table of prices
     int Row_Number;                 // Number of rows in this room
     Row* Rows_Tab;                  // Table containing the rows
     int Pit;                        // 1 if the Room has a pit, 0 otherwise
