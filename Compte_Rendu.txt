@@ -6,7 +6,7 @@ Responsabilités :
 
     Riman Saad :        Partie Festivalier et Robustesse
     Clovis Cazauran :   Partie Manager
-    Étienne Boche :     Couleur, Affichage, Main, Enregistrament fichier, Makefile
+    Étienne Boche :     Couleur, Affichage, Menu principal, Enregistrament fichier, Makefile
 
 Problème Rencontrés :
     Riman Saad :
@@ -15,5 +15,5 @@ Problème Rencontrés :
     Clovis Cazauran :
 
     --------------------------------------------------------------------------------------------------------
-    Étienne Boche : J'ai eu du mal afficher les caractère spéciaux et emoji sur mon PC, j'ai donc installé
+    Étienne Boche : J'ai eu du mal afficher les caractère spéciaux et emojis sur mon PC, j'ai donc installé
     WSL2.  
