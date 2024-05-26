@@ -1,0 +1,19 @@
+Compte rendu du projet GE500 :
+
+Participants Riman Saad - Clovis Cazauran - Étienne Boche
+
+Responsabilités : 
+
+    Riman Saad :        Partie Festivalier et Robustesse
+    Clovis Cazauran :   Partie Manager
+    Étienne Boche :     Couleur, Affichage, Main, Enregistrament fichier, Makefile
+
+Problème Rencontrés :
+    Riman Saad :
+
+    --------------------------------------------------------------------------------------------------------
+    Clovis Cazauran :
+
+    --------------------------------------------------------------------------------------------------------
+    Étienne Boche : J'ai eu du mal afficher les caractère spéciaux et emoji sur mon PC, j'ai donc installé
+    WSL2.  
