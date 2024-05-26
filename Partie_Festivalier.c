@@ -28,6 +28,9 @@ void Display_Shows(Show* List_Of_Shows, int Size_Of_List) {
 }
 
 
+// Procedure that allows 
+
+
 // Procedure that allows the user to reserve seats in a room
 void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned_Shows) {
     
@@ -61,7 +64,7 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
     
 
     Room Chosen_Room = *(List_Of_Planned_Shows[Chosen_Show_Number].Used_Room_Adress);   // Store the room to shorten the code
-    printShow(Chosen_Room);                 // Display the room to the user so he can pick his seat(s)
+    printShow(List_Of_Planned_Shows[Chosen_Show_Number]);                 // Display the room to the user so he can pick his seat(s)
 
     // Ask the user if he wants to manually choose his seat
     printf("Le programme peut vous attribuer des places automatiquement. Voulez vous choisir vous-même vos places ? \n'O' pour Oui, 'N' pour Non, '0' pour revenir au menu principal :\n ");
@@ -113,7 +116,7 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
         // Ask for the row and position of each seats to reserve, reserve those, calculate total price
         for (int i = 0; i<Reservation_Size; i++)
         {
-            printShow(Chosen_Room);   
+            printShow(List_Of_Planned_Shows[Chosen_Show_Number]);   
 
 
 
@@ -128,7 +131,7 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
 
                 if (!Valid_Input) {                   
                     while(getchar() != '\n');                               // Empty the scanned string
-                    printShow(ChosenRoom);
+                    printShow(List_Of_Planned_Shows[Chosen_Show_Number]);
                     printf("\nEntrée invalide. Entrez le numéro de la rangée de la place à réserver, ou 0 pour revenir au menu principal: \n" );
                 }
             }
@@ -153,7 +156,7 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
                         &&(getchar() == '\n');                     
                 if (!Valid_Input) {                   
                     while(getchar() != '\n');                               // Empty the scanned string
-                    printShow(ChosenRoom);
+                    printShow(List_Of_Planned_Shows[Chosen_Show_Number]);
                     printf("\nEntrée invalide. Entrez le numéro de la place à réserver, ou 0 pour revenir au menu principal: \n" );
                 }
             }
@@ -237,7 +240,7 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
         }
 
 
-        printShow(Chosen_Room)
+        printShow(List_Of_Planned_Shows[Chosen_Show_Number]);
         // Ask how many seats to reserve
         printf("\nVous pouvez automatiquement réserver %d place(s) de catégories %c au plus pour ce concert.", Max_Consecutive_Empty_Seat_Number, Chosen_Category);
         printf("\nCombien de places voulez réserver ? (0 pour revenir au menu principal) : \n");
@@ -362,26 +365,3 @@ void User_Reserve_Seats(Show* List_Of_Planned_Shows, int Size_Of_List_Of_Planned
     }
 
 }
-
-
-        
-
-
-    
-   
-    
-    
-    
-
-    
-
-
-
-    
-
-    
-
-
-
-
-
