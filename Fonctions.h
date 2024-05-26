@@ -22,6 +22,8 @@ typedef struct {
     Row* Rows_Tab;                  // Table containing the rows
     int Pit;                        // 1 if the Room has a pit, 0 otherwise
     int Is_Reserved;                // 1 if the Room is reserved, 0 otherwise
+    int Capacity;                   // Max number of people the room can hold
+    int Number_Of_Reservations;     // Number of clients' reservations
 } Room;
 
 typedef struct {
