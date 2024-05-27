@@ -4,16 +4,23 @@ Participants Riman Saad - Clovis Cazauran - Étienne Boche
 
 Responsabilités : 
 
-    Riman Saad :        Partie Festivalier et Robustesse
+    Riman Saad :        Partie Festivalier, Robustesse du programme
     Clovis Cazauran :   Partie Manager
-    Étienne Boche :     Couleur, Affichage, Menu principal, Enregistrament fichier, Makefile
+    Étienne Boche :     Couleur, Affichage, Menu principal, Enregistrement fichier, Makefile
 
 Problème Rencontrés :
-    Riman Saad :
-
+    Riman Saad : Choix des membres des structures difficiles à anticiper, difficile plannification de
+    la structure du programme,
     --------------------------------------------------------------------------------------------------------
     Clovis Cazauran :
 
     --------------------------------------------------------------------------------------------------------
     Étienne Boche : J'ai eu du mal afficher les caractère spéciaux et emojis sur mon PC, j'ai donc installé
-    WSL2.  
+    WSL2.
+
+Chronologie:
+- Choix des structures
+- Réalisation des fonction partie manager
+- Réalisation des fonctions partie festivalière
+- Réalisation du makefile
+- Réalisation du programme principal (main), fonctionnalités de couleurs, d'enregistrements en fichiers
