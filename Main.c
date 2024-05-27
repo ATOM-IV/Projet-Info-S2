@@ -490,7 +490,6 @@ int main() {
     int VInput = 0 ;
     Show* List_Of_Planned_Shows = calloc(3 , sizeof(Show));                         //Remplacer par la fonction qui importe les structures
     
-    printf("\nBienvenue ! Vous êtes dans GE500 le gestionnaire de concerts le plus efficace !\n");
 
     Room* Rooms_Tab = malloc(0 * sizeof(Room));
     Show* Shows_Tab = malloc(0 * sizeof(Show));
@@ -499,16 +498,11 @@ int main() {
     Time CurrentTime;
 
     Shows_Tab = readShow();
-    
-    create_show(Shows_Tab, &Input, Rooms_Tab, Size_Of_Rooms_Tab);
-    Display_Shows(Shows_Tab, 1);
-    printShow(Shows_Tab[0]);
-    
-    SaveShows(Shows_Tab, Size_Of_Shows_Tab);
+        
+    printf("\nBienvenue ! Vous êtes dans GE500 le gestionnaire de concerts le plus efficace !\n");
 
-    
-    //Main_Menu(Rooms_Tab, Shows_Tab, Size_Of_Rooms_Tab, Size_Of_Shows_Tab, &CurrentTime);
-   
+    Main_Menu(Rooms_Tab, Shows_Tab, Size_Of_Rooms_Tab, Size_Of_Shows_Tab, &CurrentTime);
+    SaveShows(Shows_Tab, Size_Of_Shows_Tab);
     return 1;
 
 }
